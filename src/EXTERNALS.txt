@@ -1,1 +1,1 @@
-gites.skin http://svn.affinitic.be/plone/gites.skin/trunk
+gites.skin http://svn.affinitic.be/plone/gites/gites.skin/trunk
