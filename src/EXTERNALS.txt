@@ -1,0 +1,1 @@
+gites.skin http://svn.affinitic.be/plone/gites.skin/trunk
