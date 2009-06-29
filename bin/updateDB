@@ -1,0 +1,2 @@
+#!/bin/sh
+ssh root@clavius.affinitic.be "sudo -u postgres pg_dump -O -x -F c -c -C gites_wallons"|pg_restore -W -x -v -C -O -F c -d template1
