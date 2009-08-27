@@ -1,4 +1,5 @@
-gites.skin http://svn.affinitic.be/plone/gites/gites.skin/trunk
 gites.core http://svn.affinitic.be/plone/gites/gites.core/trunk
 gites.db http://svn.affinitic.be/plone/gites/gites.db/trunk
+gites.ldap http://svn.affinitic.be/plone/gites/gites.ldap/trunk
+gites.skin http://svn.affinitic.be/plone/gites/gites.skin/trunk
 bnbelgium.skin http://svn.affinitic.be/plone/gites/bnbelgium.skin/trunk
