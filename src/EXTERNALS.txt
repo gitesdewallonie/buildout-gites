@@ -4,3 +4,5 @@ gites.db http://svn.affinitic.be/plone/gites/gites.db/trunk
 gites.ldap http://svn.affinitic.be/plone/gites/gites.ldap/trunk
 gites.skin http://svn.affinitic.be/plone/gites/gites.skin/trunk
 bnbelgium.skin http://svn.affinitic.be/plone/gites/bnbelgium.skin/trunk
+five.megrok.z3cform svn://svn.zope.org/repos/main/five.megrok.z3cform/trunk
+megrok.z3cform svn://svn.zope.org/repos/main/megrok.z3cform/trunk
