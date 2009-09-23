@@ -6,3 +6,4 @@ gites.skin http://svn.affinitic.be/plone/gites/gites.skin/trunk
 bnbelgium.skin http://svn.affinitic.be/plone/gites/bnbelgium.skin/trunk
 five.megrok.z3cform svn://svn.zope.org/repos/main/five.megrok.z3cform/trunk
 megrok.z3cform svn://svn.zope.org/repos/main/megrok.z3cform/trunk
+gites.ldapimport http://svn.affinitic.be/python/gites.ldapimport/trunk
