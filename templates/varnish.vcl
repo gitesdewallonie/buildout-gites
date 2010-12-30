@@ -78,13 +78,15 @@ sub vcl_fetch {
                     set beresp.http.reset-age = "1";
             }
     }
-
+    if (beresp.http.Pragma ~ "no-cache" || beresp.http.Cache-Control ~ "(no-cache|no-store|private)") {
+      return(pass);
+    }
     if (req.url ~ "\.(jpg|jpeg|gif|png|tiff|tif|svg|swf|ico|css|js|vsd|doc|ppt|pps|xls|pdf|mp3|mp4|m4a|ogg|mov|avi|wmv|sxw|zip|gz|bz2|tgz|tar|rar|odc|odb|odf|odg|odi|odp|ods|odt|sxc|sxd|sxi|sxw|dmg|torrent|deb|msi|iso|rpm)$") {
-    set beresp.ttl = 600s;
+    set beresp.ttl = 7200s;
     call override;
     }
     if (beresp.http.Content-Type ~ "image.*$") {
-    set beresp.ttl = 600s;
+    set beresp.ttl = 7200s;
         call override;
     }
     if (beresp.http.Set-Cookie) {
