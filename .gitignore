@@ -11,3 +11,4 @@ local
 parts
 versions-picked.cfg
 buildout.cfg
+etc
