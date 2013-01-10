@@ -30,6 +30,7 @@ build:
 	cp -ap ./*.cfg $(BUILDDIR)
 	cd $(BUILDDIR) && virtualenv .
 	rm -f $(BUILDDIR)/buildout.cfg
+	mkdir $(BUILDDIR)/eggs
 	cd $(BUILDDIR) && ln -s base.cfg buildout.cfg
 	cd $(BUILDDIR) && bin/python bootstrap.py --eggs=$(BUILDDIR)/eggs
 	cd $(BUILDDIR) && bin/buildout -c base.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
