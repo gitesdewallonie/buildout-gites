@@ -12,7 +12,6 @@ CURDIR    := $(shell pwd)
 BUILDDIR  := $(CURDIR)/tmp/$(PACKAGE)
 DEBIAN    := $(CURDIR)/debian/$(PACKAGE)
 INSTALLDIR   := /home/gdw/$(PACKAGE)
-#INSTALLDIR := $(DEBIAN)/home/gdw/$(PACKAGE)/
 
 distribution := $(shell lsb_release -is)
 
