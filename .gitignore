@@ -12,3 +12,5 @@ parts
 versions-picked.cfg
 buildout.cfg
 etc
+*.swp
+*.un~
