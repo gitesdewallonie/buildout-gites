@@ -1,0 +1,5 @@
+gites-website (1.0-1) stable; urgency=low
+
+  * Update package to use new egg names schema
+
+ -- Jean-François Roche <jfroche@affinitic.be>  Thu, 10 Jan 2013 12:00:00 +0100
