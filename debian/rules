@@ -48,6 +48,8 @@ install:
 	rm -fr ${BUILDDIR}/downloads
 	mkdir -p $(DEBIAN)/home/gdw/$(PACKAGE)
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
+	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/bin/interpreter
+	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
 	cp -ap $(BUILDDIR)/bin $(DEBIAN)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIAN)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIAN)/${INSTALLDIR}
