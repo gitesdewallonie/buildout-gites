@@ -3,44 +3,23 @@
 set -e
 
 PACKAGE="gites-website"
+PACKAGE_HOME="/home/gdw/$PACKAGE"
 
 case "$1" in
     configure)
 	# create var
-	/bin/mkdir -p /opt/$PACKAGE/var/blobstorage
-	/bin/mkdir -p /opt/$PACKAGE/var/filestorage
-	/bin/mkdir -p /opt/$PACKAGE/var/instance
-	/bin/mkdir -p /opt/$PACKAGE/var/log
-	/bin/chown -R zope.root /opt/$PACKAGE/var
-	/bin/chmod 0700 /opt/$PACKAGE/var/blobstorage
-	/bin/chmod 0700 /opt/$PACKAGE/var/filestorage
-
-    # add init.d script
-	cp /opt/$PACKAGE/bin/instance-rc /etc/init.d/$PACKAGE
-	/usr/sbin/update-rc.d $PACKAGE defaults >/dev/null 2>&1
-
-	if [ ! -f /opt/$PACKAGE/var/filestorage/Data.fs ]; then
-        # create default plone site
-        /opt/$PACKAGE/bin/instance run /usr/lib/plone40/utils/createsite.py Plone admin plonetheme.classic:default,plonetheme.sunburst:default >/dev/null 2>&1
-	fi
-
-    # restart instances
-	/usr/sbin/service $PACKAGE stop >/dev/null 2>&1
-	/usr/sbin/service $PACKAGE start >/dev/null 2>&1
-
-    # add logrotate config
-    cp /opt/$PACKAGE/parts/logrotate.conf /etc/logrotate.d/$PACKAGE
+	/bin/mkdir -p $PACKAGE_HOME/var/blobstorage
+	/bin/mkdir -p $PACKAGE_HOME/var/filestorage
+	/bin/mkdir -p $PACKAGE_HOME/var/instance
+	/bin/mkdir -p $PACKAGE_HOME/var/log
+	/bin/chown -R gdw.gdw $PACKAGE_HOME
+	/bin/chmod 0700 $PACKAGE_HOME/var/blobstorage
+	/bin/chmod 0700 $PACKAGE_HOME/var/filestorage
 
     ;;
 
     abort-remove|abort-upgrade|abort-deconfigure)
-    	/usr/sbin/service $PACKAGE stop >/dev/null 2>&1
-
-	    /bin/rm -f /etc/init.d/$PACKAGE >/dev/null 2>&1
-
-    	/usr/sbin/update-rc.d $PACKAGE remove >/dev/null 2>&1
-	
-    	rm -f /etc/logrotate.d/$PACKAGE
+        echo "abort"
     ;;
 
     *)
