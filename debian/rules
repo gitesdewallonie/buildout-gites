@@ -8,16 +8,16 @@
 export DH_OPTIONS
 
 PACKAGE	  := gites-website
-BUILDDIR  := /tmp/$(PACKAGE)
 CURDIR    := $(shell pwd)
+BUILDDIR  := $(CURDIR)/tmp/$(PACKAGE)
 DEBIAN    := $(CURDIR)/debian/$(PACKAGE)
-PYTHONVER := 2.7
-PYTHONBIN := /usr/bin/python$(PYTHONVER)
+INSTALLDIR   := /home/gdw/$(PACKAGE)
+#INSTALLDIR := $(DEBIAN)/home/gdw/$(PACKAGE)/
 
 distribution := $(shell lsb_release -is)
 
 clean:
-	rm -rf $(BUILDDIR)/
+	#rm -rf $(BUILDDIR)/
 	dh_testdir
 	dh_testroot
 	rm -rf build
@@ -29,9 +29,10 @@ build:
 	cp -ap ./bootstrap.py $(BUILDDIR)
 	cp -ap ./*.cfg $(BUILDDIR)
 	cd $(BUILDDIR) && virtualenv .
+	rm -f $(BUILDDIR)/buildout.cfg
 	cd $(BUILDDIR) && ln -s base.cfg buildout.cfg
 	cd $(BUILDDIR) && bin/python bootstrap.py
-	cd $(BUILDDIR) && bin/buildout -c base.cfg
+	cd $(BUILDDIR) && bin/buildout -c base.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
 	echo $(DEBIAN)
 	touch build-stamp
 
@@ -41,14 +42,18 @@ install:
 	dh_testroot
 	dh_clean -k -s
 	dh_installdirs -s
-
+	rm  ${BUILDDIR}/.mr.developer.cfg
+	rm  ${BUILDDIR}/.installed.cfg
+	rm  ${BUILDDIR}/versions-picked.cfg
+	rm -fr ${BUILDDIR}/downloads
 	mkdir -p $(DEBIAN)/home/gdw/$(PACKAGE)
+	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
+	cp -ap $(BUILDDIR)/bin $(DEBIAN)/${INSTALLDIR}
+	cp -ap $(BUILDDIR)/devel $(DEBIAN)/${INSTALLDIR}
+	cp -ap $(BUILDDIR)/eggs $(DEBIAN)/${INSTALLDIR}
+	cp -ap $(BUILDDIR)/parts $(DEBIAN)/${INSTALLDIR}
 
-	cp -ap $(BUILDDIR)/bin $(DEBIAN)/home/gdw/$(PACKAGE)/
-	#cp -ap $(BUILDDIR)/eggs $(DEBIAN)/home/gdw/$(PACKAGE)/
-	cp -ap $(BUILDDIR)/parts $(DEBIAN)/home/gdw/$(PACKAGE)/
-
-	rm -rf $(BUILDDIR)/
+	#rm -rf $(BUILDDIR)/
 
 binary-common:
 	dh_testdir
