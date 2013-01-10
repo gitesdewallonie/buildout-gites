@@ -4,7 +4,7 @@
 #
 VERSION=`cat version.txt`
 deb:
-	git-dch -a
+	git-dch -a --ignore-branch
 	dch -v $(VERSION).$(BUILD_NUMBER) release --no-auto-nmu
 	dpkg-buildpackage -b -uc -us
 
