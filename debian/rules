@@ -50,11 +50,11 @@ install:
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/bin/interpreter
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
-	rm -r $(BUILDDIR)/parts/omelette
 	cp -ap $(BUILDDIR)/bin $(DEBIAN)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIAN)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIAN)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts $(DEBIAN)/${INSTALLDIR}
+	for i in $(find $(DEBIAN)/${INSTALLDIR}/parts/omelette -type l); do old_link=$(readlink -m $i); new_link=$(echo $old_link | sed  s%${BUILDDIR}/${INSTALLDIR}/); rm $i; ln -f -s $new_link $i; done
 
 	#rm -rf $(BUILDDIR)/
 
