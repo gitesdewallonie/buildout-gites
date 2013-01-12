@@ -33,7 +33,7 @@ build:
 	cd $(BUILDDIR) && virtualenv .
 	rm -f $(BUILDDIR)/buildout.cfg
 	mkdir -p $(BUILDDIR)/eggs
-	cd $(BUILDDIR) && ln -s base.cfg buildout.cfg
+	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
 	cd $(BUILDDIR) && bin/python bootstrap.py --eggs=$(BUILDDIR)/eggs buildout:eggs-directory=$(BUILDDIR)/eggs
 	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
 	echo $(DEBIANCORE)
@@ -56,6 +56,7 @@ install-base:
 install-core:
 	mkdir -p $(DEBIANCORE)/home/gdw/$(PACKAGE)
 	mkdir -p $(DEBIANCORE)/home/gdw/$(PACKAGE)/parts
+	find ${BUILDDIR}/bin -executable -type f -exec sed -i s%${BUILDDIR}%${INSTALLDIR}%g {} \;
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/bin/interpreter
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
@@ -63,6 +64,7 @@ install-core:
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
+	cp -ap $(BUILDDIR)/parts/products-dist $(DEBIANCORE)/${INSTALLDIR}/parts
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeo
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeopack
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/repozo
@@ -76,6 +78,7 @@ install-zeo:
 	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/bin
 	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/parts
 	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/var/zeo
+	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/var/log
 	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/var/filestorage
 	mkdir -p $(DEBIANZEO)/${INSTALLDIR}/var/blobstorage
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/zeo
@@ -95,6 +98,7 @@ install-instances:
 	    mkdir -p $(DEBIANINSTANCE)$$i/${INSTALLDIR} ; \
 	    mkdir -p $(DEBIANINSTANCE)$$i/${INSTALLDIR}/bin ; \
 	    mkdir -p $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts ; \
+	    mkdir -p $(DEBIANINSTANCE)$$i/${INSTALLDIR}/var/instance$$i ; \
 	    cp -ap $(BUILDDIR)/bin/instance01 $(DEBIANINSTANCE)$$i/${INSTALLDIR}/bin/instance$$i ; \
 	    cp -ap $(BUILDDIR)/parts/instance01 $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts/instance$$i ; \
 	    sed -i s/instance01/instance$$i/g $(DEBIANINSTANCE)$$i/${INSTALLDIR}/bin/instance$$i ; \
