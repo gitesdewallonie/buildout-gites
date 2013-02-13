@@ -14,3 +14,7 @@ buildout.cfg
 etc
 *.swp
 *.un~
+*.egg-info
+*.pyc
+
+gites-data.fs

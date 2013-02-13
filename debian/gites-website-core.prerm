@@ -1,0 +1,22 @@
+set -e
+
+PACKAGE="gites-website-core"
+
+
+case "$1" in
+    remove|deconfigure)
+        find /home/gdw/gites-website/eggs -name "*.pyc" -delete;
+	find /home/gdw/gites-website/eggs -name "*.pyo" -delete;
+    fi
+    ;;
+
+    upgrade|failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

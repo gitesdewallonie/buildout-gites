@@ -6,8 +6,39 @@ Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.3
 Homepage: http://www.affinitic.be
 
-Package: gites-website
+Package: gites-website-core
 Architecture: any
 Depends: ${shlibs:Depends}
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
+
+Package: gites-website-zeoserver
+Architecture: any
+Depends: gites-website-core
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-website-instance01
+Architecture: any
+Depends: gites-website-core
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-website-instance02
+Architecture: any
+Depends: gites-website-core
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-website-instance03
+Architecture: any
+Depends: gites-website-core
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-website-instance04
+Architecture: any
+Depends: gites-website-core
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
