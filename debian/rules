@@ -34,7 +34,7 @@ build:
 	rm -f $(BUILDDIR)/buildout.cfg
 	mkdir -p $(BUILDDIR)/eggs
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
-	cd $(BUILDDIR) && bin/python bootstrap.py --eggs=$(BUILDDIR)/eggs buildout:eggs-directory=$(BUILDDIR)/eggs
+	cd $(BUILDDIR) && bin/python bootstrap.py buildout:eggs-directory=$(BUILDDIR)/eggs
 	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
 	echo $(DEBIANCORE)
 	touch build-stamp
@@ -50,7 +50,7 @@ install-base:
 	dh_installdirs -s
 	rm  ${BUILDDIR}/.mr.developer.cfg
 	rm  ${BUILDDIR}/.installed.cfg
-	rm  ${BUILDDIR}/versions-picked.cfg
+	rm -f ${BUILDDIR}/versions-picked.cfg
 	rm -fr ${BUILDDIR}/downloads
 
 install-core:
@@ -64,7 +64,6 @@ install-core:
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
-	cp -ap $(BUILDDIR)/parts/products-dist $(DEBIANCORE)/${INSTALLDIR}/parts
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeo
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeopack
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/repozo
