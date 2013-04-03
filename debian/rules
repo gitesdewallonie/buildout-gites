@@ -50,7 +50,7 @@ install-base:
 	dh_installdirs -s
 	rm  ${BUILDDIR}/.mr.developer.cfg
 	rm  ${BUILDDIR}/.installed.cfg
-	rm  ${BUILDDIR}/versions-picked.cfg
+	rm -f ${BUILDDIR}/versions-picked.cfg
 	rm -fr ${BUILDDIR}/downloads
 
 install-core:
