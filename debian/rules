@@ -34,7 +34,7 @@ build:
 	rm -f $(BUILDDIR)/buildout.cfg
 	mkdir -p $(BUILDDIR)/eggs
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
-	cd $(BUILDDIR) && bin/python bootstrap.py --eggs=$(BUILDDIR)/eggs buildout:eggs-directory=$(BUILDDIR)/eggs
+	cd $(BUILDDIR) && bin/python bootstrap.py buildout:eggs-directory=$(BUILDDIR)/eggs
 	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
 	echo $(DEBIANCORE)
 	touch build-stamp
