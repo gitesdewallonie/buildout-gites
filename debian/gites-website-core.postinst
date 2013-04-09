@@ -5,6 +5,8 @@ set -e
 PACKAGE="gites-website"
 PACKAGE_HOME="/home/gdw/$PACKAGE"
 
+$PACKAGE_HOME/bin/gdw_db_migration upgrade head
+
 case "$1" in
     configure)
 	# create var
