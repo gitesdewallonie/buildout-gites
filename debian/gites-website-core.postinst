@@ -9,7 +9,9 @@ case "$1" in
     configure)
 	# create var
 	/bin/chown -R gdw.gdw $PACKAGE_HOME
-
+	/usr/bin/find $PACKAGE_HOME -name '*.pyc' -delete
+	/usr/bin/find $PACKAGE_HOME -name '*.pyo' -delete
+	/usr/bin/find $PACKAGE_HOME -name '*.mo' -delete
     ;;
 
     abort-remove|abort-upgrade|abort-deconfigure)
