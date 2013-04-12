@@ -1,12 +1,15 @@
+#!/bin/sh
 set -e
+set -x
 
 PACKAGE="gites-website-core"
 
 
 case "$1" in
     remove|deconfigure)
-        find /home/gdw/gites-website/eggs -name "*.pyc" -delete;
-	find /home/gdw/gites-website/eggs -name "*.pyo" -delete;
+	find /home/gdw/gites-website/eggs /home/gdw/gites-website/devel -name "*.pyc" -delete;
+	find /home/gdw/gites-website/eggs /home/gdw/gites-website/devel -name "*.pyo" -delete;
+	find /home/gdw/gites-website/eggs /home/gdw/gites-website/devel -name "*.bin" -delete;
     ;;
 
     upgrade|failed-upgrade)

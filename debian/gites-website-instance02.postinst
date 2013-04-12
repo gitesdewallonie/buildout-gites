@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -x
 set -e
 
 PACKAGE="gites-website"
@@ -9,7 +9,7 @@ case "$1" in
     configure)
 	# create var
 	/bin/chown -R gdw.gdw $PACKAGE_HOME
-
+	/etc/init.d/gites-website-instance02 restart
     ;;
 
     abort-remove|abort-upgrade|abort-deconfigure)
