@@ -69,6 +69,7 @@ install-core:
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeopack
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/repozo
 	rm $(DEBIANCORE)/${INSTALLDIR}/bin/instance01
+	rm $(DEBIANCORE)/${INSTALLDIR}/bin/instance02
 	for i in $(find $(DEBIANCORE)/${INSTALLDIR}/parts/omelette -type l); do old_link=$(readlink -m $i); new_link=$(echo $old_link | sed  s%${BUILDDIR}/${INSTALLDIR}/); rm $i; ln -f -s $new_link $i; done
 	find $(DEBIANCORE)/${INSTALLDIR} -name "*.pyc" -delete;
 	find $(DEBIANCORE)/${INSTALLDIR} -name "*.pyo" -delete;
