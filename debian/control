@@ -14,31 +14,31 @@ Description: Gites Plone 4 site
 
 Package: gites-website-zeoserver
 Architecture: any
-Depends: gites-website-core
+Depends: gites-website-core (= ${binary:Version})
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
 Package: gites-website-instance01
 Architecture: any
-Depends: gites-website-core
+Depends: gites-website-core (= ${binary:Version})
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
 Package: gites-website-instance02
 Architecture: any
-Depends: gites-website-core
+Depends: gites-website-core (= ${binary:Version})
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
 Package: gites-website-instance03
 Architecture: any
-Depends: gites-website-core
+Depends: gites-website-core (= ${binary:Version})
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
 Package: gites-website-instance04
 Architecture: any
-Depends: gites-website-core
+Depends: gites-website-core (= ${binary:Version})
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
