@@ -19,7 +19,7 @@ INSTALLDIR   := /home/gdw/$(PACKAGE)
 distribution := $(shell lsb_release -is)
 
 clean:
-	rm -rf $(BUILDDIR)/
+	#rm -rf $(BUILDDIR)/
 	dh_testdir
 	dh_testroot
 	rm -rf build
