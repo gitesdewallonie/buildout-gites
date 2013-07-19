@@ -48,8 +48,8 @@ install-base:
 	dh_testroot
 	dh_clean -k -s
 	dh_installdirs -s
-	rm  ${BUILDDIR}/.mr.developer.cfg
-	rm  ${BUILDDIR}/.installed.cfg
+	rm -f ${BUILDDIR}/.mr.developer.cfg
+	rm -f ${BUILDDIR}/.installed.cfg
 	rm -f ${BUILDDIR}/versions-picked.cfg
 	rm -fr ${BUILDDIR}/downloads
 
