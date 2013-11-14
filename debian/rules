@@ -33,9 +33,11 @@ build:
 	cd $(BUILDDIR) && virtualenv .
 	rm -rf $(BUILDDIR)/devel
 	rm -f $(BUILDDIR)/buildout.cfg
+	rm -f $(BUILDDIR)/lib/python2.7/site-packages/easy-install.pth
+	rm -f $(BUILDDIR)/lib/python2.7/site-packages/setuptools*
 	mkdir -p $(BUILDDIR)/eggs
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
-	cd $(BUILDDIR) && wget https://bitbucket.org/pypa/setuptools/raw/0.8/ez_setup.py && bin/python2.7 ez_setup.py
+	cd $(BUILDDIR) && wget https://bitbucket.org/pypa/setuptools/raw/0.8/ez_setup.py -O ez_setup.py && bin/python2.7 ez_setup.py
 	cd $(BUILDDIR) && bin/python2.7 bootstrap.py --version=2.2.0 buildout:eggs-directory=$(BUILDDIR)/eggs
 	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
 	echo $(DEBIANCORE)
