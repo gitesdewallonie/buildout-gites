@@ -34,7 +34,7 @@ build:
 	rm -rf $(BUILDDIR)/devel
 	rm -f $(BUILDDIR)/buildout.cfg
 	rm -f $(BUILDDIR)/lib/python2.7/site-packages/easy-install.pth
-	rm -f $(BUILDDIR)/lib/python2.7/site-packages/setuptools*
+	rm -rf $(BUILDDIR)/lib/python2.7/site-packages/setuptools*
 	mkdir -p $(BUILDDIR)/eggs
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
 	cd $(BUILDDIR) && wget https://bitbucket.org/pypa/setuptools/raw/0.8/ez_setup.py -O ez_setup.py && bin/python2.7 ez_setup.py
