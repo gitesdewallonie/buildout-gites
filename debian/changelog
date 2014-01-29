@@ -1,0 +1,265 @@
+gites-bnb (1.1.) UNRELEASED; urgency=low
+
+  [ Jean-François Roche ]
+  * initial buildout for new gites website based on plone 3.3
+  * add externals for skin
+  * use psycopg2
+  * externals update
+  * add updatedb & add gites.core & add gites.db & configure pwmanger
+  * add subsite
+  * add getpaid & subsite
+  * fix getpaid release error on bootstrap
+  * allow code on googlecode
+  * add five & linguaplone
+  * fix deps problem
+
+  [ Laurent Lasudry ]
+  * Add z3c.jbot
+
+  [ Jean-François Roche ]
+  * add skin switcher
+  * add gites.ldap
+  * add z3c.amf
+  * add gites.calendar
+
+  [ Alain Meurant ]
+  * modification liens tous
+
+  [ Jean-François Roche ]
+  * add possibility to exclude document from navigation
+  * add depedencies on p4a.calendar, five.megrok.z3cform, z3c.form, Products.PloneZCdatetimewidget, collective.z3cform.datepicker
+
+  [ Laurent Lasudry ]
+  * Add z3c.recipe.i18n
+  * Remove z3c.recipe.i18n Use i18ndude instead
+  * Don't use i18ndude in buildout as it breaks Zope instance Install it in another virtualenv instead
+
+  [ Jean-François Roche ]
+  * add cluster config
+  * update base & cluster: use ldap 2.3.5 & plone 3.3.1
+  * add config files
+  * add gites.ldapimport
+  * grok update & add gites.ldapimport
+  * ping grok version & use z3c.form 2.1
+  * add versions
+  * pin some versions & add plone.app.z3cform
+
+  [ Laurent Lasudry ]
+  * Fix jbot override error
+
+  [ Jean-François Roche ]
+  * add gites.imports
+
+  [ Laurent Lasudry ]
+  * Add mailmansubform to buildout
+
+  [ Jean-François Roche ]
+  * pin more eggs
+  * fix too new zope.traversing
+
+  [ Laurent Lasudry ]
+  * Fix five.megrok.z3cform revision to avoid buildout error
+  * Add gites.calendar to scripts ##
+
+  [ Jean-François Roche ]
+  * pin more versions ##
+  * update zope ##
+  * fix revisions ##
+  * upgrade psycopg2 ##
+  * upgrade varnish ##
+  * update buildout ##
+  * increase caching ttl ##
+  * upgrade plone & sqlalchemy ##
+  * pin pyamf correctly ##
+  * lower varnish cache size to 200 Mo ##
+  * upgrade zope ##
+  * apply zope patch http://plone.org/products/plone/security/advisories/cve-2011-0720 ##
+  * upgrade pound & varnish ##
+  * increase cache time ##
+  * introduce memcached for cache management ##
+  * introduce memcached for cache management ##
+  * add new script in supervisor ##
+  * add new hotfix ##
+
+  [ mpeeters ]
+  * Add Products.Zope-Hotfix-20110622 ##
+  * Update Products.PloneHotfix20110531 version to 2.0 ##
+  * Fix namespace for Products.Zope-Hotfix-20110622 ##
+
+  [ Jean-François Roche ]
+  * add scripts in gites.db ##
+  * switch to mr.developer & pin more eggs ##
+  * sort eggs ##
+  * update memcached - pound - use DateTime 3.0 (fix some mem leak) ##
+  * upgrade psycopg2 ##
+
+  [ Laurent Lasudry ]
+  * Fix missing Products.MemcachedManager for development ##
+  * Fix missing overrides for RAMCacheAdapter ##
+
+  [ Jean-François Roche ]
+  * fix missing package
+  * add plone 3 - security fix base buildout
+  * hotfix are defined in base
+  * gites.calendar has been migrated to github
+
+  [ schminitz ]
+  * merge
+
+  [ Jean-François Roche ]
+  * use https to connect to github
+
+  [ schminitz ]
+  * Fix bootstrap and some versions for bnbelgium branch refs #4837
+
+  [ Jean-François Roche ]
+  * use github branches
+  * fix branch for bnbelgium.skin
+  * update ignore
+  * fix find links
+
+  [ Laurent Lasudry ]
+  * Fix bootstrap
+  * Fix versions
+
+  [ Jean-François Roche ]
+  * upgrade testrunner & use plone.testing layers
+  * release
+  * initial buildout for new gites website based on plone 3.3
+  * add externals for skin
+  * use psycopg2
+  * externals update
+  * add updatedb & add gites.core & add gites.db & configure pwmanger
+  * add subsite
+  * add getpaid & subsite
+  * fix getpaid release error on bootstrap
+  * allow code on googlecode
+  * add five & linguaplone
+  * fix deps problem
+
+  [ Laurent Lasudry ]
+  * Add z3c.jbot
+
+  [ Jean-François Roche ]
+  * add skin switcher
+  * add gites.ldap
+  * add z3c.amf
+  * add gites.calendar
+
+  [ Alain Meurant ]
+  * modification liens tous
+
+  [ Jean-François Roche ]
+  * add possibility to exclude document from navigation
+  * add depedencies on p4a.calendar, five.megrok.z3cform, z3c.form, Products.PloneZCdatetimewidget, collective.z3cform.datepicker
+
+  [ Laurent Lasudry ]
+  * Add z3c.recipe.i18n
+  * Remove z3c.recipe.i18n Use i18ndude instead
+  * Don't use i18ndude in buildout as it breaks Zope instance Install it in another virtualenv instead
+
+  [ Jean-François Roche ]
+  * add cluster config
+  * update base & cluster: use ldap 2.3.5 & plone 3.3.1
+  * add config files
+  * add gites.ldapimport
+  * grok update & add gites.ldapimport
+  * ping grok version & use z3c.form 2.1
+  * add versions
+  * pin some versions & add plone.app.z3cform
+
+  [ Laurent Lasudry ]
+  * Fix jbot override error
+
+  [ Jean-François Roche ]
+  * add gites.imports
+
+  [ Laurent Lasudry ]
+  * Add mailmansubform to buildout
+
+  [ Jean-François Roche ]
+  * pin more eggs
+  * fix too new zope.traversing
+
+  [ Laurent Lasudry ]
+  * Fix five.megrok.z3cform revision to avoid buildout error
+  * Add gites.calendar to scripts ##
+
+  [ Jean-François Roche ]
+  * pin more versions ##
+  * update zope ##
+  * fix revisions ##
+  * upgrade psycopg2 ##
+  * upgrade varnish ##
+  * update buildout ##
+  * increase caching ttl ##
+  * upgrade plone & sqlalchemy ##
+  * pin pyamf correctly ##
+  * lower varnish cache size to 200 Mo ##
+  * upgrade zope ##
+  * apply zope patch http://plone.org/products/plone/security/advisories/cve-2011-0720 ##
+  * upgrade pound & varnish ##
+  * increase cache time ##
+  * introduce memcached for cache management ##
+  * introduce memcached for cache management ##
+  * add new script in supervisor ##
+  * add new hotfix ##
+
+  [ mpeeters ]
+  * Add Products.Zope-Hotfix-20110622 ##
+  * Update Products.PloneHotfix20110531 version to 2.0 ##
+  * Fix namespace for Products.Zope-Hotfix-20110622 ##
+
+  [ Jean-François Roche ]
+  * add scripts in gites.db ##
+  * switch to mr.developer & pin more eggs ##
+  * sort eggs ##
+  * update memcached - pound - use DateTime 3.0 (fix some mem leak) ##
+  * upgrade psycopg2 ##
+
+  [ Laurent Lasudry ]
+  * Fix missing Products.MemcachedManager for development ##
+  * Fix missing overrides for RAMCacheAdapter ##
+
+  [ Jean-François Roche ]
+  * fix missing package
+  * add plone 3 - security fix base buildout
+  * hotfix are defined in base
+  * gites.calendar has been migrated to github
+
+  [ schminitz ]
+  * merge
+
+  [ Jean-François Roche ]
+  * use https to connect to github
+
+  [ schminitz ]
+  * Fix bootstrap and some versions for bnbelgium branch refs #4837
+
+  [ Jean-François Roche ]
+  * use github branches
+  * fix branch for bnbelgium.skin
+  * update ignore
+  * fix find links
+
+  [ Laurent Lasudry ]
+  * Fix bootstrap
+  * Fix versions
+
+  [ Jean-François Roche ]
+  * upgrade testrunner & use plone.testing layers
+  * release
+
+ -- Jean-François Roche <jfroche@jfroche-lenovo>  Wed, 29 Jan 2014 14:54:10 +0100
+
+gites-bnb (1.0-2) stable; urgency=low
+
+  * Fix bootstrap
+
+ -- Jean-François Roche <jfroche@affinitic.be>  Thu, 10 Jan 2013 17:00:00 +0100
+
+gites-bnb (1.0-1) stable; urgency=low
+
+  * Update package to use new egg names schema
+
+ -- Jean-François Roche <jfroche@affinitic.be>  Thu, 10 Jan 2013 12:00:00 +0100

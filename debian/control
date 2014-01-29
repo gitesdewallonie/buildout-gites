@@ -1,0 +1,44 @@
+Source: gites-bnb
+Section: web
+Priority: extra
+Maintainer: Jean-François Roche <jfroche@affinitic.be>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://www.affinitic.be
+
+Package: gites-bnb-core
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-bnb-zeoserver
+Architecture: any
+Depends: gites-bnb-core (= ${binary:Version})
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-bnb-instance01
+Architecture: any
+Depends: gites-bnb-core (= ${binary:Version})
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-bnb-instance02
+Architecture: any
+Depends: gites-bnb-core (= ${binary:Version})
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-bnb-instance03
+Architecture: any
+Depends: gites-bnb-core (= ${binary:Version})
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
+Package: gites-bnb-instance04
+Architecture: any
+Depends: gites-bnb-core (= ${binary:Version})
+Conflicts: plone33-demo
+Description: Gites Plone 4 site
+
