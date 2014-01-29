@@ -59,6 +59,7 @@ install-core:
 	mkdir -p $(DEBIANCORE)/home/gdw/$(PACKAGE)/parts
 	find ${BUILDDIR}/bin -executable -type f -exec sed -i s%${BUILDDIR}%${INSTALLDIR}%g {} \;
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
+	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/bin/runzope
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
 	cp -ap $(BUILDDIR)/bin $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
@@ -103,6 +104,7 @@ install-instances:
 	    cp -ap $(BUILDDIR)/bin/instance01 $(DEBIANINSTANCE)$$i/${INSTALLDIR}/bin/instance$$i ; \
 	    cp -ap $(BUILDDIR)/parts/instance01 $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts/instance$$i ; \
 	    sed -i s/instance01/instance$$i/g $(DEBIANINSTANCE)$$i/${INSTALLDIR}/bin/instance$$i ; \
+	    sed -i s%${BUILDDIR}%${INSTALLDIR}%g $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts/instance$$i/bin/runzope ; \
 	    sed -i s/instance01/instance$$i/g $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts/instance$$i/etc/zope.conf ; \
             sed -i "s/address 5080/address $((5010 + 10#$$i))/" $(DEBIANINSTANCE)$$i/${INSTALLDIR}/parts/instance$$i/etc/zope.conf ; \
 	done
