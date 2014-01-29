@@ -33,10 +33,10 @@ build:
 	cd $(BUILDDIR) && virtualenv -p python2.4 .
 	rm -rf $(BUILDDIR)/devel
 	rm -f $(BUILDDIR)/buildout.cfg
-	mkdir -p $(BUILDDIR)/eggs
+	mkdir -p $(BUILDDIR)/eggs $(BUILDDIR)/zope
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
-	cd $(BUILDDIR) && bin/python bootstrap.py buildout:eggs-directory=$(BUILDDIR)/eggs
-	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs
+	cd $(BUILDDIR) && bin/python bootstrap.py buildout:eggs-directory=$(BUILDDIR)/eggs buildout:zope-directory=$(BUILDDIR)/zope
+	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs buildout:zope-directory=$(BUILDDIR)/zope
 	echo $(DEBIANCORE)
 	touch build-stamp
 
@@ -63,6 +63,7 @@ install-core:
 	cp -ap $(BUILDDIR)/bin $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIANCORE)/${INSTALLDIR}
+	cp -ap $(BUILDDIR)/zope $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
 	cp -ap $(BUILDDIR)/parts/zpsycopg $(DEBIANCORE)/${INSTALLDIR}/parts
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeo
