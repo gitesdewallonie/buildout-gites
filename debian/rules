@@ -67,6 +67,8 @@ install-core:
 	cp -ap $(BUILDDIR)/zope $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
 	cp -ap $(BUILDDIR)/parts/zpsycopg $(DEBIANCORE)/${INSTALLDIR}/parts
+	cp -ap $(BUILDDIR)/parts/products-dist $(DEBIANCORE)/${INSTALLDIR}/parts
+	cp -ap $(BUILDDIR)/parts/localfs $(DEBIANCORE)/${INSTALLDIR}/parts
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeo
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeopack
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/repozo
