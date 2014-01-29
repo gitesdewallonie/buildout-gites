@@ -63,6 +63,7 @@ install-core:
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
 	cp -ap $(BUILDDIR)/bin $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
+	cp -ap $(BUILDDIR)/develop-eggs $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/zope $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
