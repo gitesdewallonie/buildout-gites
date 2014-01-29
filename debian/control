@@ -8,7 +8,7 @@ Homepage: http://www.affinitic.be
 
 Package: gites-bnb-core
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, python2.4
 Conflicts: plone33-demo
 Description: Gites Plone 4 site
 
