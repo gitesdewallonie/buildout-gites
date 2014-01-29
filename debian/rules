@@ -59,7 +59,6 @@ install-core:
 	mkdir -p $(DEBIANCORE)/home/gdw/$(PACKAGE)/parts
 	find ${BUILDDIR}/bin -executable -type f -exec sed -i s%${BUILDDIR}%${INSTALLDIR}%g {} \;
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/bin/instance01
-	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/bin/interpreter
 	sed -i s%${BUILDDIR}%${INSTALLDIR}%g ${BUILDDIR}/parts/instance01/etc/zope.conf
 	cp -ap $(BUILDDIR)/bin $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
