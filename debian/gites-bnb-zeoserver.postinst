@@ -10,7 +10,6 @@ case "$1" in
 	# create var
 	/bin/chown -R gdw.gdw $PACKAGE_HOME
 	/bin/chmod 0700 $PACKAGE_HOME/var/filestorage
-	/etc/init.d/gites-bnb-zeoserver restart
     ;;
 
     abort-remove|abort-upgrade|abort-deconfigure)
