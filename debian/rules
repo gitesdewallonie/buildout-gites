@@ -30,7 +30,7 @@ build:
 	mkdir -p $(BUILDDIR)
 	cp -ap ./bootstrap.py $(BUILDDIR)
 	cp -ap ./*.cfg $(BUILDDIR)
-	cd $(BUILDDIR) && virtualenv -p python2.4 .
+	cd $(BUILDDIR) && virtualenv-2.4 .
 	rm -rf $(BUILDDIR)/devel
 	rm -f $(BUILDDIR)/buildout.cfg
 	mkdir -p $(BUILDDIR)/eggs $(BUILDDIR)/zope
