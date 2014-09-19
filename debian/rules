@@ -27,9 +27,10 @@ clean:
 	dh_clean
 
 build:
-	mkdir -p $(BUILDDIR)
+	mkdir -p $(BUILDDIR)/bin
 	cp -ap ./bootstrap.py $(BUILDDIR)
 	cp -ap ./*.cfg $(BUILDDIR)
+	cp -ap ./bin/* $(BUILDDIR)/bin/
 	cd $(BUILDDIR) && virtualenv .
 	rm -rf $(BUILDDIR)/devel
 	rm -f $(BUILDDIR)/buildout.cfg
