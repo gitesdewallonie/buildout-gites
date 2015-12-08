@@ -35,7 +35,7 @@ build:
 	rm -f $(BUILDDIR)/buildout.cfg
 	mkdir -p $(BUILDDIR)/eggs $(BUILDDIR)/zope
 	cd $(BUILDDIR) && ln -s cluster.cfg buildout.cfg
-	cd $(BUILDDIR) && bin/python bootstrap.py buildout:eggs-directory=$(BUILDDIR)/eggs buildout:zope-directory=$(BUILDDIR)/zope
+	cd $(BUILDDIR) && bin/python bootstrap.py -d buildout:eggs-directory=$(BUILDDIR)/eggs buildout:zope-directory=$(BUILDDIR)/zope
 	cd $(BUILDDIR) && bin/buildout -c cluster.cfg buildout:eggs-directory=$(BUILDDIR)/eggs buildout:zope-directory=$(BUILDDIR)/zope
 	echo $(DEBIANCORE)
 	touch build-stamp
