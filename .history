@@ -1,0 +1,334 @@
+
+: 1421541783:0;export PG_HOSTNAME=$CERISE_DB_PORT_5432_TCP_ADDR
+: 1421541783:0;vim -n -S ~/.vim/sessions/compta.vim
+: 1421541790:0;exit
+: 1421541814:0;export PG_HOSTNAME=$CERISE_DB_PORT_5432_TCP_ADDR
+: 1421541814:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421541831:0;ls
+: 1421541834:0;vi fig.yml
+: 1421541853:0;vi .tmux.conf
+: 1421541862:0;vi .tmuxinator/package.yml
+: 1421541890:0;ls
+: 1421541891:0;exit
+: 1421541894:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421541898:0;exit
+: 1421541917:0;watchmedo tricks-from .tricks.yaml
+: 1421541917:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421541918:0;ctags parts/omelette && git pull
+: 1421541929:0;ls
+: 1421541930:0;pwd
+: 1421541933:0;ag fonts de
+: 1421541934:0;ag fonts devel
+: 1421541938:0;vi devel/gites.theme/gites/theme/profiles/default/cssregistry.xml
+: 1421541955:0;ag facebook devel
+: 1421541958:0;ag facebook devel|grep http
+: 1421542113:0;vi devel/gites.theme/gites/theme/viewlets/templates/facebookviewlet.pt
+: 1421542125:0;ag google devel|grep http
+: 1421542142:0;ag google devel|grep --color http
+: 1421542146:0;man grep
+: 1421542157:0;ag google devel|grep --color http
+: 1421542175:0;grep -ri google devel
+: 1421542181:0;grep --color -ri google devel
+: 1421542200:0;ag "http.*google" devel
+: 1421542267:0;ag "google" devel
+: 1421542269:0;ag "google" devel|grep maps
+: 1421542319:0;cd devel
+: 1421542320:0;ls
+: 1421542320:0;cd monet.mapsviewlet
+: 1421542321:0;ls
+: 1421542322:0;git remote -v
+: 1421542406:0;sl
+: 1421542409:0;ag http
+: 1421542458:0;vi monet/mapsviewlet/viewlets/gmaps.pt
+: 1421542465:0;git diff
+: 1421542505:0;ls -la ~/.ssh
+: 1421542519:0;cat ~/.ssh/id_rsa
+: 1421542578:0;ls
+: 1421542579:0;git diff
+: 1421542589:0;ls
+: 1421542590:0;cd ..
+: 1421542590:0;ls
+: 1421542595:0;ag http|grep -v https
+: 1421542702:0;ag -g *.py http|grep -v https
+: 1421542706:0;ag -g "*.py" http|grep -v https
+: 1421542712:0;ag -g '.py' http|grep -v https
+: 1421542728:0;ag -G '.py' http|grep -v https
+: 1421542741:0;ag -G '.py' http|grep -v setup.py|grep -v https
+: 1421542748:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests
+: 1421542769:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py
+: 1421542781:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421542807:0;vi gites.map/src/gites/map/browser/utils.py
+: 1421542846:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421542856:0;vi gites.calendar/gites/calendar/scripts/activity.py
+: 1421542870:0;ls
+: 1421542874:0;ag embedly
+: 1421543209:0;ls
+: 1421543212:0;ag youtube 
+: 1421543218:0;vi gites.theme/gites/theme/viewlets/templates/footerviewlet.pt
+: 1421543250:0;vi gites.theme/gites/theme/viewlets/footer.py
+: 1421543406:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421543416:0;vi gites.calendar/gites/calendar/scripts/activity.py
+: 1421543424:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421543439:0;vi Products.PloneGetPaid/Products/PloneGetPaid/browser/checkout.py
+: 1421543444:0;ag -G '.py' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421543534:0;git st
+: 1421543570:0;ls
+: 1421543587:0;cd ..
+: 1421543588:0;bin/develop st
+: 1421543637:0;ls
+: 1421543646:0;bin/develop st|grep " M "
+: 1421543655:0;cd devel
+: 1421543657:0;cd Products.PloneGetPaid
+: 1421543658:0;git diff
+: 1421543660:0;git st
+: 1421543662:0;cd ..
+: 1421543662:0;ls
+: 1421543663:0;git st
+: 1421543667:0;cd gites.calendar
+: 1421543668:0;git st
+: 1421543670:0;git diff
+: 1421543803:0;git st
+: 1421543807:0;git diff
+: 1421543853:0;ls
+: 1421544304:0;git st
+: 1421544306:0;git diff
+: 1421544313:0;cd ..
+: 1421544316:0;cd gites.map
+: 1421544316:0;ls
+: 1421544317:0;git st
+: 1421544318:0;git diff
+: 1421544341:0;git checkout -- src/gites/map/browser/utils.py
+: 1421544343:0;git st
+: 1421544344:0;cd ..
+: 1421544345:0;ls
+: 1421544349:0;cd gites.theme
+: 1421544350:0;git diff
+: 1421544385:0;git st
+: 1421544388:0;git diff
+: 1421544423:0;ls
+: 1421544426:0;cd ..
+: 1421544426:0;ls
+: 1421544436:0;ag "libraries="
+: 1421544442:0;vi gites.map/src/gites/map/profiles/default/jsregistry.xml
+: 1421544494:0;ag -G '.py|.js' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421545528:0;git diff
+: 1421545608:0;vi gites.map/src/gites/map/profiles/default/jsregistry.xml
+: 1421545614:0;ag -G '.py|.js' http|grep -v setup.py|grep -v https|grep -v tests|grep -v bootstrap.py|grep -v telecommuni
+: 1421545686:0;cd ..
+: 1421545688:0;bin/develop st
+: 1421545700:0;cd devel/gites.calendar
+: 1421545701:0;git diff
+: 1421545727:0;vi gites/calendar/scripts/activity.py
+: 1421545735:0;git diff
+: 1421545748:0;git ci -m "use ssl" gites/calendar/
+: 1421545749:0;git st
+: 1421545756:0;ls
+: 1421545780:0;cd ..
+: 1421545780:0;ls
+: 1421545793:0;cd gites.map
+: 1421545794:0;git st
+: 1421545795:0;git diff
+: 1421545865:0;git ci -m "use ssl" src/gites/map/profiles/default/jsregistry.xml
+: 1421545866:0;git push
+: 1421545870:0;ls
+: 1421545872:0;cd ..
+: 1421545872:0;ls
+: 1421545879:0;bin/develop st|grep " M "
+: 1421545885:0;cd gites.theme
+: 1421545886:0;ls
+: 1421545887:0;git diff
+: 1421546223:0;git st
+: 1421546225:0;git diff
+: 1421546232:0;git ci -m "use ssl"
+: 1421546233:0;git ci -m "use ssl" .
+: 1421546234:0;git st
+: 1421546235:0;git push
+: 1421546239:0;cd ..
+: 1421546239:0;ls
+: 1421546242:0;bin/develop st|grep " M "
+: 1421546253:0;cd monet.mapsviewlet
+: 1421546254:0;ls
+: 1421546255:0;git diff
+: 1421546276:0;git ci -m "use ssl" monet/mapsviewlet/viewlets/gmaps.pt
+: 1421546278:0;git push
+: 1421546281:0;cd ..
+: 1421546282:0;ls
+: 1421546285:0;cd gites.map
+: 1421546286:0;git st
+: 1421546287:0;git diff
+: 1421546288:0;cd ..
+: 1421546289:0;ls
+: 1421546291:0;cd gites.calendar
+: 1421546291:0;ls
+: 1421546293:0;git diff
+: 1421546295:0;cd ..
+: 1421546295:0;ls
+: 1421546298:0;cd pygeocoder
+: 1421546299:0;ls
+: 1421546299:0;git st
+: 1421546302:0;svn st
+: 1421546304:0;hg diff
+: 1421546305:0;cd ..
+: 1421546305:0;ls
+: 1421546309:0;cd plone.widgets
+: 1421546311:0;git st
+: 1421546312:0;cd ..
+: 1421546312:0;ls
+: 1421546316:0;cd gites.calendar
+: 1421546317:0;git diff
+: 1421546318:0;cd ..
+: 1421546320:0;cd gites.map
+: 1421546320:0;git st
+: 1421546322:0;cd ..
+: 1421546322:0;ls
+: 1421546324:0;cd monet.mapsviewlet
+: 1421546324:0;ls
+: 1421546325:0;git st
+: 1421546327:0;git diff
+: 1421546478:0;cd ..
+: 1421546482:0;ag likebox
+: 1421546486:0;cd gites.theme
+: 1421546486:0;git st
+: 1421546702:0;cd ..
+: 1421546714:0;ctags parts/omelette && git pull
+: 1421546714:0;watchmedo tricks-from .tricks.yaml
+: 1421546714:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421546725:0;/code/.vim/sessions/gdw.website.vim
+: 1421546728:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421546733:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421546733:0;watchmedo tricks-from .tricks.yaml
+: 1421546733:0;ctags parts/omelette && git pull
+: 1421547232:0;ls
+: 1421547452:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421547452:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421547452:0;ctags parts/omelette && git pull
+: 1421547452:0;watchmedo tricks-from .tricks.yaml
+: 1421547458:0;bin/instance01 fg
+: 1421547540:0;export
+: 1421547544:0;export|grep -i pass
+: 1421547621:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421547621:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421547621:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421547621:0;ctags parts/omelette && git pull
+: 1421547621:0;watchmedo tricks-from .tricks.yaml
+: 1421547627:0;bin/instance01 fg
+: 1421547641:0;ls pass
+: 1421547655:0;ls
+: 1421547657:0;ls pass
+: 1421547669:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421547669:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1421547669:0;touch /code/.vim/sessions/gdw.website.vim
+: 1421547669:0;watchmedo tricks-from .tricks.yaml
+: 1421547669:0;ctags parts/omelette && git pull
+: 1421547674:0;ls pass
+: 1421547682:0;ls
+: 1421547684:0;ls pass
+: 1421547686:0;bin/instance01 fg
+: 1426154314:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426154314:0;ctags parts/omelette && git pull
+: 1426154314:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426154314:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1426154315:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426154315:0;watchmedo tricks-from .tricks.yaml
+: 1426693919:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426693919:0;watchmedo tricks-from .tricks.yaml
+: 1426693919:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426693919:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1426693919:0;touch /code/.vim/sessions/gdw.website.vim
+: 1426693919:0;ctags parts/omelette && git pull
+: 1426693926:0;bin/instance01 fg
+: 1426693933:0;cd src
+: 1426693934:0;ls
+: 1426693935:0;cd ..
+: 1426693936:0;ls
+: 1426693936:0;cd devel
+: 1426693937:0;ls
+: 1432127491:0;touch /code/.vim/sessions/gdw.website.vim
+: 1432127491:0;ctags parts/omelette && git pull
+: 1432127491:0;watchmedo tricks-from .tricks.yaml
+: 1432127491:0;touch /code/.vim/sessions/gdw.website.vim
+: 1432127492:0;vim -n -S ~/.vim/sessions/gdw.website.vim
+: 1432127497:0;ls
+: 1432127499:0;cd parts/omelette
+: 1432127502:0;cd Products
+: 1432127504:0;ag applyCh
+: 1432127507:0;ag apply_ch
+: 1432127508:0;ag apply
+: 1432127509:0;ls
+: 1432127512:0;ag -r apply
+: 1432127534:0;grep -ri applyCha .
+: 1432127561:0;cd Archetypes
+: 1432127561:0;ls
+: 1432127563:0;grep apply *
+: 1432127603:0;ls
+: 1432127605:0;vi BaseContent.py
+: 1432127621:0;vi BaseObject.py
+: 1432127847:0;grep validat *
+: 1460668232:0;whereis zsh
+: 1460668235:0;exit
+: 1460668254:0;ls
+: 1460668260:0;vi parts/instance01/etc/zope.conf
+: 1460668268:0;bin/instance01 fg
+: 1460668297:0;ls
+: 1460668300:0;ls pass
+: 1460668302:0;exit
+: 1460668319:0;bin/instance01 fg
+: 1460668351:0;ls pass
+: 1460668353:0;exit
+: 1460668392:0;ls pass
+: 1460668394:0;bin/instance01 fg
+: 1460668421:0;ls pass
+: 1460668423:0;ls -l pass
+: 1460668434:0;vi /code/eggs/affinitic.pwmanager-0.3-py2.7.egg/affinitic/pwmanager/pwmanager.py
+: 1460668473:0;bin/instance01 fg
+: 1460668544:0;PASSWORD_DIR=/code/pass bin/instance01 fg
+: 1460668561:0;exit
+: 1460668635:0;bin/instance01 fg
+: 1460668652:0;ls
+: 1460668657:0;PASSWORD_DIR=/code/pass bin/instance01 fg
+: 1460668670:0;ls pass
+: 1460668672:0;exit
+: 1460668720:0;bin/instance01 fg
+: 1460668755:0;vi /code/devel/gites.db/gites/db/initializer.py
+: 1460668761:0;vi /code/devel/gites.db/gites/db/__init__.py
+: 1460668938:0;bin/instance01 fg
+: 1460668956:0;vi pass/pgpass
+: 1460668961:0;bin/instance01 fg
+: 1460669384:0;exit
+: 1460669497:0;bin/instance01 fg
+: 1460669543:0;exit
+: 1460669810:0;ls
+: 1460669814:0;ping memcached
+: 1460669815:0;ls
+: 1460669835:0;vi parts/omelette/affinitic/caching/memcached.py
+: 1460669851:0;nc
+: 1460669870:0;nc -v memcached 11211
+: 1460669874:0;exit
+: 1460669920:0;bin/instance01 fg
+: 1460670101:0;vi devel/gites.ldap/gites/ldap/setuphandlers.py
+: 1460670111:0;bin/instance01 fg
+: 1460670132:0;vi devel/gites.ldap/gites/ldap/setuphandlers.py
+: 1460670306:0;bin/instance01 fg
+: 1460670345:0;ls pass
+: 1460670351:0;cat pass/ldappass
+: 1460670359:0;vi devel/gites.ldap/gites/ldap/setuphandlers.py
+: 1460670371:0;bin/instance01 fg
+: 1460670571:0;ls
+: 1460670574:0;vim Makefile
+: 1460670793:0;exit
+: 1460671173:0;ls -l var
+: 1460671176:0;ls -l var/filestorage
+: 1460671180:0;ls -l var/blobstorage
+: 1460671183:0;bin/instance01 fg
+: 1460671267:0;vi parts/instance01/etc/zope.conf
+: 1460671275:0;bin/instance01 fg
+: 1460671396:0;export
+: 1460671398:0;a
+: 1460671404:0;export|grep -i memc
+: 1460671454:0;bin/instance01 fg
+: 1460671512:0;vi parts/instance01/etc/zope.conf
+: 1460671516:0;bin/instance01 fg
+: 1460671542:0;mkdir /home/gdw/ftp/photos_heb
+: 1460671552:0;mkdir -p /home/gdw/ftp/photos_heb
+: 1460671586:0;sudo ls
+: 1460671593:0;exit

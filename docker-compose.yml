@@ -1,0 +1,45 @@
+giteswebsite:
+  image: gdw.website
+  command: /bin/zsh
+  ports:
+    - 5080:5080
+  extends:
+    file: ~/.docker/dev.yml
+    service: dev
+  external_links:
+    - gdw_website_postgres:gdw_website_postgres
+  links:
+    - memcached:memcached
+  environment:
+    - SHELL=/usr/bin/zsh
+    - LC_ALL=en_US.UTF-8
+    - LANG=en_US.UTF-8
+    - FLAKE8_IGNORE=E501
+    - TERM=xterm-256color
+    - PASSWORD_DIR=/code/pass
+    - PG_HOSTNAME=gdw_website_postgres
+    - MEMCACHE_SERVER=memcached:11211
+  command: mux start package
+  volumes:
+    - .gitignore:/code/.gitignore
+    - .git:/code/.git
+    - docker.cfg:/code/docker.cfg
+    - setup.py:/code/setup.py
+    - ./src:/code/src
+    - ./docs:/code/docs
+    - .tmuxinator:/code/.tmuxinator
+    - /etc/tmux.conf:/etc/tmux.conf
+    - .tricks.yaml:/code/.tricks.yaml
+    - .history:/code/.history
+    - ./devel:/code/devel
+    - .flake8:/code/.config/flake8
+    - .pylintrc:/code/.pylintrc
+    - ~/.pypirc:/code/.pypirc
+    - /dev/log:/dev/log
+    - ./pass:/code/pass
+    - ./var/filestorage:/code/var/filestorage
+    - ./var/blobstorage:/code/var/blobstorage
+memcached:
+  image: memcached
+  ports:
+    - "11211:11211"

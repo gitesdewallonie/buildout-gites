@@ -16,5 +16,5 @@ etc
 *.un~
 *.egg-info
 *.pyc
-
+pass
 gites-data.fs
