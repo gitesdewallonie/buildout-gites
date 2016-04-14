@@ -23,5 +23,9 @@ sync-pass:
 	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*pass" pass
 	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*admins" pass
 
+sync-data:
+	mkdir -p var
+	rsync -av --exclude Data.fs.old gdw@lagrange.affinitic.be:/home/gdw/gites-website/var/filestorage/ var/filestorage/
+	rsync -av gdw@lagrange.affinitic.be:/home/gdw/gites-website/var/blobstorage/ var/blobstorage/
 
 .PHONY: deb upgrade-db
