@@ -16,13 +16,12 @@ build:
 	docker cp gdw.site:/code/devel .
 	docker rm gdw.site
 run:
-	fig run giteswebsite
+	docker-compose run --rm --service-ports giteswebsite /bin/zsh
 
-sync:
-	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*key" .
-	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*pass" .
-	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*admins" .
-
+sync-pass:
+	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*key" pass
+	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*pass" pass
+	scp "lagrange.affinitic.be:/home/gdw/gites-website/var/*admins" pass
 
 
 .PHONY: deb upgrade-db
