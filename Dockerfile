@@ -7,7 +7,7 @@ RUN apt-get install -y libmysqlclient-dev subversion mercurial libldap2-dev libs
 RUN apt-get install -y tmux silversearcher-ag zsh exuberant-ctags parallel python-setuptools
 RUN pip install watchdog pyflakes pep8 flake8 pylint zest.releaser pyroma check-manifest git+https://github.com/yejianye/watchdog-tricks.git
 RUN gem install tmuxinator
-RUN mkdir -p /home/gdw/ftp/photos_heb
+RUN mkdir -p /home/gdw/ftp/photos_heb /home/gdw/ftp/photos_proprio
 # end dev
 RUN chown -R plone .
 USER plone
